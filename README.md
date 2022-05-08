@@ -28,9 +28,25 @@ Since data integrity is the priority, miners have to stay long enough and provid
 
 ![tech stack](./assets/techstack.png)
 
-## How to run
+## Installation
 
-// tbd
+1. Clone this repo using `git clone https://github.com/DarthBenro008/coracle`
+2. Make sure you have truffle and ganache installed
+3. Run the following commands to deploy the smart contract
+    ```bash
+    truffle compile
+    truffle migrate
+    truffle test
+    ```
+4. Go to scripts directory
+5. Run multiple instances of the `miner.js` file
+6. Run the `consumer.js` file
+7. You can mint the token by running the `owner.js` file
+8. Ensure that you change the smart contract address in both the `miner.js` as well as the `owner.js` files!
+
+## Screenshot
+
+![screenshot](./assets/screenshot.png)
 
 ## Show your support
 
