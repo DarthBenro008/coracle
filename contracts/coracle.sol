@@ -487,6 +487,7 @@ contract BEP20Token is Context, IBEP20, Ownable {
         addColamos("BNB/USD", 50, "https://dex.binance.org/api/v1/klines?symbol=BNB_USDSB-1AC&interval=1d&limit=1");
         addColamos("LTC/USD", 50, "https://api.binance.com/api/v1/klines?symbol=LTCUSDT&interval=1d&limit=1");
         addColamos("XRP/USD", 50, "https://api.binance.com/api/v1/klines?symbol=XRPUSDT&interval=1d&limit=1");
+        addColamos("DOGE/USD", 50, "https://api.binance.com/api/v1/klines?symbol=XRPUSDT&interval=1d&limit=1");
         emit Transfer(address(0), msg.sender, _totalSupply);
     }
 
