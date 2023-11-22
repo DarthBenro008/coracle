@@ -204,7 +204,7 @@ contract BEP20Token is Context, IBEP20, Ownable {
         view
         returns (ColaData memory)
     {
-        for (uint256 i = 0; i < colamosCount; i++) {
+        for (uint256 i; i < colamosCount; ++i) {
             if (
                 keccak256(bytes(colamos[i].name)) == keccak256(bytes(_colaName))
             ) {
@@ -215,7 +215,7 @@ contract BEP20Token is Context, IBEP20, Ownable {
     }
 
     uint256 first = 1;
-    uint256 last = 0;
+    uint256 last;
 
     function enqueueCola(string memory _colaname) public {
         last += 1;
@@ -233,7 +233,7 @@ contract BEP20Token is Context, IBEP20, Ownable {
 
     // to add a request queue
     function addQueue(string memory _colaName) public {
-        for (uint256 i = 0; i < colamosCount; i++) {
+        for (uint256 i; i < colamosCount; ++i) {
             if (
                 keccak256(bytes(colamos[i].name)) == keccak256(bytes(_colaName))
             ) {
@@ -251,7 +251,7 @@ contract BEP20Token is Context, IBEP20, Ownable {
 
     // miner updating the value of the data
     function updateValue(string memory _colaName, uint256 result) public {
-        for (uint256 i = 0; i < colamosCount; i++) {
+        for (uint256 i; i < colamosCount; ++i) {
             if (
                 keccak256(bytes(colamos[i].name)) == keccak256(bytes(_colaName))
             ) {
